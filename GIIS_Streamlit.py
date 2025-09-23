@@ -15,7 +15,8 @@ from lime import lime_tabular
 from imblearn.over_sampling import SMOTE
 
 ## Load Model & data
-df_imputed = pd.read_csv("C:/Users/Lenovo/OneDrive/Documents/Kuliah/KP/df_imputed.csv")
+url = 'https://raw.githubusercontent.com/HasiruGit/GIIS-Industry-Scale-Classification/refs/heads/main/df_imputed.csv'
+df_imputed = pd.read_csv(url)
 
 
 X = df_imputed.drop(columns="klasifikasi_encoded")
@@ -112,4 +113,5 @@ with tab3:
                                                  num_features=len(df_imputed.columns.tolist()), top_labels=3)
         interpretation_fig = explanation.as_pyplot_figure(label=prediction[0])
         st.pyplot(interpretation_fig, use_container_width=True)
+
     
