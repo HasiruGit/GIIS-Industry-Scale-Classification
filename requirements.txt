@@ -4,8 +4,9 @@ joblib
 pandas
 numpy
 matplotlib
-scikitplot
+scikit-plot
 lime
 imblearn
+
 
 
