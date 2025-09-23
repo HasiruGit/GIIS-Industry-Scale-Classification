@@ -5,8 +5,10 @@ pandas
 numpy
 matplotlib
 scikit-plot
+scipy==1.11.4
 lime
 imblearn
+
 
 
 
