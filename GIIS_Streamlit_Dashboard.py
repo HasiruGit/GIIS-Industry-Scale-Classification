@@ -187,10 +187,6 @@ with tab_home:
     "dengan struktur dan urgensi pengisian data. maka dari itu dilakukan pemodelan klasifikasi dengan harapan " \
     "dapat memudahkan proses pengisian data. Namun tidak dapat dipungkiri masalah imbalance data, sehingga " \
     "dilakukan metode SMOTE untuk mengatasi masalah tersebut.")
-    
-    if kesimpulan_text:
-        st.markdown("**Kesimpulan Tersimpan:**")
-        st.markdown(kesimpulan_text)
 
 # --- (Rest of the code remains unchanged) ---
 
@@ -278,3 +274,4 @@ with tab_local:
         
         interpretation_fig = explanation.as_pyplot_figure(label=prediction[0])
         st.pyplot(interpretation_fig)
+
