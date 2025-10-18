@@ -67,18 +67,29 @@ tab_home, tab_data, tab_global, tab_local = st.tabs([
 with tab_home:
     st.header("Disperindag Jawa Timur")
     
-    # 1. Image Uploader
-    uploaded_image = st.file_uploader("Upload a project image", type=["png", "jpg", "jpeg"])
-    if uploaded_image is not None:
-        st.image(uploaded_image, caption="Project Image", use_column_width=True)
-    
-    # 2. Text Input Area
-    st.subheader("Pengantar / Deskripsi Proyek")
+    # 1. Deskripsi Instansi
+    st.subheader("Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur")
     # Added a unique key
-    user_text = st.text_area("Latar Belakang dan Tujuan Proyek:", key="pengantar_text")
-    if user_text:
-        st.markdown("**Your Saved Notes:**")
-        st.markdown(user_text)
+    user_text = st.text_area("Dinas Perindustrian dan Perdagangan Provinsi (Disperindag) Jawa Timur memiliki " \
+    "visi untuk menjadikan Jawa Timur maju dengan mengedepankan semangat pro investasi melalui " \
+    "langkah yang tertata dan penuh totalitas (METAL). Misi yang diemban adalah melanjutkan pembangunan " \
+    "berbasis investasi yang maju, sinergis, dan berkelanjutan; menghadirkan pemerintahan yang bersih, efektif, " \
+    "dan terpercaya; serta mewujudkan masyarakat Jawa Timur yang tangguh, cerdas, berkarakter, dan berdaya saing "
+    "(Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur, n.d.)", key="Disperindag_text",)
+    
+    # 2. Latar belakang
+    st.subheader("Deskripsi Proyek")
+    # Added a unique key
+    user_text = st.text_area("Tujuan umum dari pelaksanaan Kerja Praktik ini adalah " \
+    "mendapatkan gambaran umum tentang Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur secara " \
+    "lengkap, meliputi profil, sejarah, visi misi, struktur organisasi, serta penerapan bidang kerja statistik " \
+    "dalam mendukung perumusan suatu kebijakan. Selain itu, kegiatan ini bertujuan agar mahasiswa mampu " \
+    "beradaptasi dan bermasyarakat dalam dunia kerja serta mendapatkan pengalaman nyata tentang lingkungan " \
+    "kerja di Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur.\n\n Tujuan khusus dari pelaksanaan Kerja Praktik " \
+    "ini adalah untuk menganalisis permasalahan yang diberikan oleh Dinas Perindustrian dan " \
+    "​​Perdagangan Provinsi Jawa Timur dan dapat menyajikan solusi yang tepat dan dapat digunakan " \
+    "oleh instansi terhadap permasalahan yang ditemukan atau sesuai dengan kebutuhan instansi. ", key="pengantar_text")
+    
 
     # 3. Expandable Summary Statistics (with new plots)
     st.divider()
@@ -178,7 +189,11 @@ with tab_home:
     st.subheader("Kesimpulan")
     
     # Add a text area with a unique key
-    kesimpulan_text = st.text_area("Kesimpulan Eksplorasi data dan Saran:", key="kesimpulan_text")
+    kesimpulan_text = st.text_area("Data masih banyak yang inbalance, banyak missing data yang diganti menjadi 0 merupakan salah" \
+    "satu alasan. Hal ini disebabkan dikarenakan pengisian data yang kurang teratur. Pemilik industri cenderung kurang paham" \
+    "dengan struktur dan urgensi pengisian data. maka dari itu dilakukan pemodelan klasifikasi dengan harapan " \
+    "dapat memudahkan proses pengisian data. Namun tidak dapat dipungkiri masalah imbalance data, sehingga " \
+    "dilakukan metode SMOTE untuk mengatasi masalah tersebut.", key="kesimpulan_text")
     
     if kesimpulan_text:
         st.markdown("**Kesimpulan Tersimpan:**")
@@ -270,6 +285,3 @@ with tab_local:
         
         interpretation_fig = explanation.as_pyplot_figure(label=prediction[0])
         st.pyplot(interpretation_fig)
-
-
-
