@@ -68,9 +68,8 @@ with tab_home:
   # Create columns for the images at the top left
     img_col1, img_col2, img_col3, img_col4, _ = st.columns([1, 1, 1, 1, 6]) 
     img1 = 
-    img2 =
+    img2 = "https://github.com/HasiruGit/GIIS-Industry-Scale-Classification/blob/main/Lambang-ITS-2-300x300.png?raw=true"
     img3 =
-    img4 = 
   
     with img_col1:
         st.image("img1", caption="Logo 1", width=100) 
@@ -78,8 +77,6 @@ with tab_home:
         st.image("img2", caption="Logo 2", width=100)
     with img_col3:
         st.image("img3", caption="Logo 3", width=100)
-    with img_col4:
-        st.image("img4", caption="Logo 4", width=100)
       
     st.header("Disperindag Jawa Timur")
     
@@ -290,5 +287,6 @@ with tab_local:
         
         interpretation_fig = explanation.as_pyplot_figure(label=prediction[0])
         st.pyplot(interpretation_fig)
+
 
 
