@@ -13,7 +13,7 @@ from imblearn.over_sampling import SMOTE
 
 ## Load Model & data
 # Ensure the path is correct for your system
-df_imputed = pd.read_csv("C:/Users/Lenovo/OneDrive/Documents/Kuliah/KP/df_imputed.csv")
+df_imputed = pd.read_csv("https://github.com/HasiruGit/GIIS-Industry-Scale-Classification/blob/main/df_imputed.csv")
 
 # --- MODIFICATION ---
 # Define the specific features you want to use for prediction AND training.
@@ -269,3 +269,4 @@ with tab_local:
         
         interpretation_fig = explanation.as_pyplot_figure(label=prediction[0])
         st.pyplot(interpretation_fig)
+
