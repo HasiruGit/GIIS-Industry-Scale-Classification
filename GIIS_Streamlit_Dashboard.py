@@ -72,11 +72,11 @@ with tab_home:
     img3 = 'https://raw.githubusercontent.com/HasiruGit/GIIS-Industry-Scale-Classification/main/Statistika%20ITS.png'
   
     with img_col1:
-        st.image("img1", caption="Logo 1", width=100) 
+        st.image(img1, caption="Logo 1", width=100) 
     with img_col2:
-        st.image("img2", caption="Logo 2", width=100)
+        st.image(img2, caption="Logo 2", width=100)
     with img_col3:
-        st.image("img3", caption="Logo 3", width=100)
+        st.image(img3, caption="Logo 3", width=100)
       
     st.header("Disperindag Jawa Timur")
     
@@ -287,6 +287,7 @@ with tab_local:
         
         interpretation_fig = explanation.as_pyplot_figure(label=prediction[0])
         st.pyplot(interpretation_fig)
+
 
 
 
