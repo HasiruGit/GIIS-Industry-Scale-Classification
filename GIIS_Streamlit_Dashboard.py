@@ -70,25 +70,18 @@ with tab_home:
     # 1. Deskripsi Instansi
     st.subheader("Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur")
     # Added a unique key
-    user_text = st.text_area("Dinas Perindustrian dan Perdagangan Provinsi (Disperindag) Jawa Timur memiliki " \
+    st.markdown("Dinas Perindustrian dan Perdagangan Provinsi (Disperindag) Jawa Timur memiliki " \
     "visi untuk menjadikan Jawa Timur maju dengan mengedepankan semangat pro investasi melalui " \
     "langkah yang tertata dan penuh totalitas (METAL). Misi yang diemban adalah melanjutkan pembangunan " \
     "berbasis investasi yang maju, sinergis, dan berkelanjutan; menghadirkan pemerintahan yang bersih, efektif, " \
     "dan terpercaya; serta mewujudkan masyarakat Jawa Timur yang tangguh, cerdas, berkarakter, dan berdaya saing "
-    "(Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur, n.d.)", key="Disperindag_text",)
+    "(Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur, n.d.)")
     
     # 2. Latar belakang
     st.subheader("Deskripsi Proyek")
     # Added a unique key
-    user_text = st.text_area("Tujuan umum dari pelaksanaan Kerja Praktik ini adalah " \
-    "mendapatkan gambaran umum tentang Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur secara " \
-    "lengkap, meliputi profil, sejarah, visi misi, struktur organisasi, serta penerapan bidang kerja statistik " \
-    "dalam mendukung perumusan suatu kebijakan. Selain itu, kegiatan ini bertujuan agar mahasiswa mampu " \
-    "beradaptasi dan bermasyarakat dalam dunia kerja serta mendapatkan pengalaman nyata tentang lingkungan " \
-    "kerja di Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur.\n\n Tujuan khusus dari pelaksanaan Kerja Praktik " \
-    "ini adalah untuk menganalisis permasalahan yang diberikan oleh Dinas Perindustrian dan " \
-    "​​Perdagangan Provinsi Jawa Timur dan dapat menyajikan solusi yang tepat dan dapat digunakan " \
-    "oleh instansi terhadap permasalahan yang ditemukan atau sesuai dengan kebutuhan instansi. ", key="pengantar_text")
+    st.markdown("""- Tujuan umum dari pelaksanaan Kerja Praktik ini adalah mendapatkan gambaran umum tentang Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur secara lengkap, meliputi profil, sejarah, visi misi, struktur organisasi, serta penerapan bidang kerja statistik dalam mendukung perumusan suatu kebijakan. Selain itu, kegiatan ini bertujuan agar mahasiswa mampu beradaptasi dan bermasyarakat dalam dunia kerja serta mendapatkan pengalaman nyata tentang lingkungan kerja di Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur. 
+    - Tujuan khusus dari pelaksanaan Kerja Praktik ini adalah untuk menganalisis permasalahan yang diberikan oleh Dinas Perindustrian dan Perdagangan Provinsi Jawa Timur dan dapat menyajikan solusi yang tepat dan dapat digunakan oleh instansi terhadap permasalahan yang ditemukan atau sesuai dengan kebutuhan instansi. """)
     
 
     # 3. Expandable Summary Statistics (with new plots)
@@ -189,11 +182,11 @@ with tab_home:
     st.subheader("Kesimpulan")
     
     # Add a text area with a unique key
-    kesimpulan_text = st.text_area("Data masih banyak yang inbalance, banyak missing data yang diganti menjadi 0 merupakan salah" \
+    st.markdown("Data masih banyak yang inbalance, banyak missing data yang diganti menjadi 0 merupakan salah" \
     "satu alasan. Hal ini disebabkan dikarenakan pengisian data yang kurang teratur. Pemilik industri cenderung kurang paham" \
     "dengan struktur dan urgensi pengisian data. maka dari itu dilakukan pemodelan klasifikasi dengan harapan " \
     "dapat memudahkan proses pengisian data. Namun tidak dapat dipungkiri masalah imbalance data, sehingga " \
-    "dilakukan metode SMOTE untuk mengatasi masalah tersebut.", key="kesimpulan_text")
+    "dilakukan metode SMOTE untuk mengatasi masalah tersebut.")
     
     if kesimpulan_text:
         st.markdown("**Kesimpulan Tersimpan:**")
