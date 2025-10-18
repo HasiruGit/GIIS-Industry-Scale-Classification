@@ -66,7 +66,7 @@ tab_home, tab_data, tab_global, tab_local = st.tabs([
 # --- UPDATED "Home" TAB ---
 with tab_home:
   # Create columns for the images at the top left
-    img_col1, img_col2, img_col3, img_col4, _ = st.columns([2, 2, 2, 6], gap='medium') 
+    img_col1, img_col2, img_col3,_ = st.columns([2, 2, 2, 6], gap='medium') 
     img1 = "https://raw.githubusercontent.com/HasiruGit/GIIS-Industry-Scale-Classification/main/logo.png"
     img2 = "https://raw.githubusercontent.com/HasiruGit/GIIS-Industry-Scale-Classification/main/Lambang-ITS-2-300x300.png"
     img3 = 'https://raw.githubusercontent.com/HasiruGit/GIIS-Industry-Scale-Classification/main/Statistika%20ITS.png'
@@ -287,6 +287,7 @@ with tab_local:
         
         interpretation_fig = explanation.as_pyplot_figure(label=prediction[0])
         st.pyplot(interpretation_fig)
+
 
 
 
